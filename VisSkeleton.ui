@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VisSkeletonClass</class>
+ <widget class="QMainWindow" name="VisSkeletonClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>1150</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VisSkeleton</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="MainOpenGLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>881</width>
+      <height>771</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="AngleSlider" name="xSlider">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>850</y>
+      <width>621</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="AngleSlider" name="ySlider">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>890</y>
+      <width>621</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="AngleSlider" name="zSlider">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>930</y>
+      <width>621</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xlabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>850</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>1020</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>18</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xlabel_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>890</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xlabel_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>930</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>910</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xMinLabel">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>850</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xMaxLabel">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>850</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="yMinLabel">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>890</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="yMaxLabel">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>890</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="zMinLabel">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>930</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="zMaxLabel">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>930</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>925</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MainOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>MainOpenGLWidget.h</header>
+   <slots>
+    <signal>setAngleLimit(int)</signal>
+    <slot>resetPose()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>AngleSlider</class>
+   <extends>QSlider</extends>
+   <header>AngleSlider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="VisSkeleton.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>xSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>xlabel</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>880</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>881</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ySlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>xlabel_2</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>908</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>54</x>
+     <y>916</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>xlabel_3</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>946</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>943</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>resetPose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>860</x>
+     <y>911</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>827</x>
+     <y>787</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
